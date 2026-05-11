@@ -15,13 +15,15 @@ from .nodes import (
     classify_node,
     dead_letter_node,
     evaluate_node,
+    fan_out_node,
     finalize_node,
     intake_node,
     retry_or_fallback_node,
     risky_action_node,
     tool_node,
+    tool_worker_node,
 )
-from .routing import route_after_approval, route_after_classify, route_after_evaluate, route_after_retry
+from .routing import fan_out_tools, route_after_approval, route_after_classify, route_after_evaluate, route_after_retry
 from .state import AgentState
 
 
@@ -47,6 +49,7 @@ def build_graph(checkpointer: Any | None = None):
     graph.add_node("classify", classify_node)
     graph.add_node("answer", answer_node)
     graph.add_node("tool", tool_node)
+    graph.add_node("tool_worker", tool_worker_node)
     graph.add_node("evaluate", evaluate_node)
     graph.add_node("clarify", ask_clarification_node)
     graph.add_node("risky_action", risky_action_node)
@@ -58,7 +61,9 @@ def build_graph(checkpointer: Any | None = None):
     graph.add_edge(START, "intake")
     graph.add_edge("intake", "classify")
     graph.add_conditional_edges("classify", route_after_classify)
-    graph.add_edge("tool", "evaluate")
+    # tool route: fan-out two parallel tool_workers, both merge into evaluate via add reducer
+    graph.add_conditional_edges("tool", fan_out_tools)
+    graph.add_edge("tool_worker", "evaluate")
     graph.add_conditional_edges("evaluate", route_after_evaluate)
     graph.add_edge("clarify", "finalize")
     graph.add_edge("risky_action", "approval")

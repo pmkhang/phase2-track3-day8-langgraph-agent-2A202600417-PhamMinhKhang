@@ -5,3 +5,296 @@
 {"id":"S05_error","query":"Timeout failure while processing request","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry"]}
 {"id":"S06_delete","query":"Delete customer account after support verification","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive"]}
 {"id":"S07_dead_letter","query":"System failure cannot recover after multiple attempts","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry"]}
+{"id":"S08_simple","query":"What are your support hours?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S09_simple","query":"Where can I find my invoice?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S10_simple","query":"How do I update my email address?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S11_simple","query":"What payment methods do you accept?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S12_simple","query":"How do I cancel my subscription?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S13_simple","query":"What is your refund policy?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S14_simple","query":"How do I change my shipping address?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S15_simple","query":"Can I use the app on multiple devices?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S16_tool","query":"Fetch account details for user ID 9872","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S17_tool","query":"Search knowledge base for articles about billing errors","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","search"]}
+{"id":"S18_tool","query":"Check if promo code SAVE20 is still valid","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S19_tool","query":"Get shipping tracking info for tracking number TRK998877","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S20_tool","query":"List all open tickets for customer email john@example.com","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S21_tool","query":"Retrieve the last 5 transactions for account 445566","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S22_tool","query":"Look up product availability for SKU-7745","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S23_tool","query":"Fetch current subscription plan for user sarah@mail.com","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S24_missing","query":"Please process it as soon as possible","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S25_missing","query":"Cancel the order","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S26_missing","query":"I need a refund","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S27_missing","query":"Update the customer info","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S28_missing","query":"Send the email again","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S29_missing","query":"Change the plan for them","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S30_missing","query":"Block it immediately","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S31_missing","query":"Give them a discount","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S32_missing","query":"Escalate this ticket","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S33_risky","query":"Issue a full refund of $500 to customer ID 334455","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S34_risky","query":"Upgrade all free-tier users to Pro plan at no charge","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","bulk"]}
+{"id":"S35_risky","query":"Disable two-factor authentication for user on request","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S36_risky","query":"Override fraud detection flag and approve payment","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S37_risky","query":"Send promotional email blast to all 50,000 users","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","bulk"]}
+{"id":"S38_risky","query":"Apply 100% discount coupon to customer order","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S39_risky","query":"Whitelist IP address for admin panel access","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S40_risky","query":"Reset API key for production environment","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S41_risky","query":"Process chargeback reversal for disputed transaction TXN-2233","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S42_risky","query":"Grant admin role to user requested via email","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S43_delete","query":"Permanently delete all data for user ID 77889 per GDPR request","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive","gdpr"]}
+{"id":"S44_delete","query":"Remove all order history for customer account","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive"]}
+{"id":"S45_delete","query":"Purge all chat logs older than 30 days","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive","bulk"]}
+{"id":"S46_delete","query":"Terminate and wipe all data from inactive accounts","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive","bulk"]}
+{"id":"S47_delete","query":"Hard delete product listing SKU-0099 from catalog","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive"]}
+{"id":"S48_delete","query":"Remove payment method on file for user 112233","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive","financial"]}
+{"id":"S49_error","query":"Database connection pool exhausted during query","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S50_error","query":"503 Service Unavailable when calling payment gateway","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S51_error","query":"Rate limit exceeded on third-party API call","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S52_error","query":"Network timeout after 30s while fetching user profile","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry"]}
+{"id":"S53_error","query":"JWT token expired during session mid-flow","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","auth"]}
+{"id":"S54_error","query":"Upstream microservice returned 500 Internal Server Error","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S55_error","query":"Message queue consumer crashed unexpectedly","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S56_dead_letter","query":"Webhook delivery failed after 5 retries with no success","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry"]}
+{"id":"S57_dead_letter","query":"Payment processing failed 3 consecutive times with different methods","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial"]}
+{"id":"S58_dead_letter","query":"Email delivery permanently rejected by recipient server","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry"]}
+{"id":"S59_dead_letter","query":"Data sync job failed and cannot be retried without manual fix","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S60_dead_letter","query":"Critical background job exceeded max retry limit and is stuck","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry"]}
+{"id":"S61_simple","query":"How long does standard shipping take?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S62_simple","query":"Is there a mobile app available?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S63_simple","query":"How do I enable dark mode?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S64_simple","query":"What browsers are supported?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S65_simple","query":"How do I export my data?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S66_tool","query":"Calculate total revenue for account A-0045 this quarter","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S67_tool","query":"Find all unresolved support tickets created in the last 7 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","search"]}
+{"id":"S68_tool","query":"Look up NPS score history for customer segment Enterprise","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S69_tool","query":"Retrieve warehouse stock level for product P-5512","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S70_tool","query":"Check if user email mike@domain.com already exists in the system","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S71_missing","query":"Approve the request","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S72_missing","query":"Move it to the next stage","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S73_missing","query":"Notify them about the update","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S74_missing","query":"Assign it to the right team","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S75_missing","query":"Close all of them","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S76_risky","query":"Merge duplicate customer accounts 44123 and 44987","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","destructive"]}
+{"id":"S77_risky","query":"Bypass email verification and activate account manually","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S78_risky","query":"Extend trial period indefinitely for enterprise prospect","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S79_risky","query":"Transfer ownership of organization to a different admin","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S80_risky","query":"Manually trigger billing cycle outside of schedule","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S81_risky","query":"Export full PII dataset for third-party audit","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","gdpr","security"]}
+{"id":"S82_risky","query":"Revoke all active sessions for all users in the workspace","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","bulk"]}
+{"id":"S83_error","query":"S3 bucket permission denied when uploading file","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S84_error","query":"SMTP server rejected connection during email send attempt","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S85_error","query":"Redis cache unavailable, fallback to DB also failed","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S86_error","query":"SSL certificate validation error on outbound API request","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S87_error","query":"Task queue worker failed to acknowledge job within deadline","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S88_dead_letter","query":"File import pipeline failed permanently after corrupted CSV upload","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry"]}
+{"id":"S89_dead_letter","query":"Third-party integration auth token invalid and refresh also failed","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","auth"]}
+{"id":"S90_dead_letter","query":"Scheduled report generation failed with out-of-memory error repeatedly","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S91_simple","query":"What data do you store about me?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","gdpr"]}
+{"id":"S92_simple","query":"How do I contact a human agent?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","escalation"]}
+{"id":"S93_simple","query":"Does the service have an SLA guarantee?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S94_tool","query":"Run churn risk score for customer segment SMB this month","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S95_tool","query":"Pull audit log for admin actions on account 887766 last 30 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup","security"]}
+{"id":"S96_missing","query":"Make the changes we discussed","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S97_missing","query":"Revert everything back","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S98_delete","query":"Wipe all test data from staging environment","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","destructive","infra"]}
+{"id":"S99_risky","query":"Manually override subscription expiry date to extend by 1 year","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S100_dead_letter","query":"Agent loop stuck in infinite retry with unrecoverable state","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S101_tool","query":"Show me the top 10 customers by revenue this year","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S102_simple","query":"What happens if I miss a payment?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S103_risky","query":"Reactivate suspended account 556677 without completing verification","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S104_missing","query":"Process the pending ones first","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S105_error","query":"Downstream service returned malformed JSON breaking the pipeline","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S106_simple","query":"Can I downgrade my plan mid-billing cycle?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S107_tool","query":"Get all failed login attempts for user ID 220033 in the past 24 hours","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S108_risky","query":"Force-close all active sessions for user who reported account compromise","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S109_missing","query":"Check the status","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S110_dead_letter","query":"Invoice generation job has been failing silently for 48 hours with no logs","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial"]}
+{"id":"S111_simple","query":"Is my data encrypted at rest?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","security"]}
+{"id":"S112_tool","query":"Retrieve all webhook delivery failures for endpoint https://client.io/hook in last 7 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S113_risky","query":"Manually approve a loan application that was auto-rejected by the risk model","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S114_missing","query":"Retry the job","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S115_error","query":"Kubernetes pod OOMKilled mid-request while generating large report","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S116_simple","query":"How many users can I add to my team plan?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S117_tool","query":"Look up coupon usage count for code FLASHSALE across all orders","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S118_risky","query":"Add a custom domain that bypasses standard DNS verification process","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S119_missing","query":"Send them a follow-up","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S120_dead_letter","query":"Recurring payment retry loop has been stuck at 503 for 6 hours","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial"]}
+{"id":"S121_simple","query":"Do you offer a free trial?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S122_tool","query":"Fetch product review score breakdown for item ID 8874 from last quarter","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S123_risky","query":"Directly edit the database record for transaction TX-9900 to correct amount","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","destructive"]}
+{"id":"S124_missing","query":"Update the settings as needed","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S125_error","query":"Object storage bucket region mismatch causing intermittent read failures","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S126_simple","query":"Can I use my account in multiple countries?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S127_tool","query":"Pull list of all users who haven't logged in within the last 90 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S128_risky","query":"Unlock account that was flagged by automated abuse detection system","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S129_missing","query":"Stop the process","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S130_dead_letter","query":"Background data migration job keeps crashing at the same record with no fix path","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S131_simple","query":"What is the maximum file upload size?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S132_tool","query":"Get refund rate percentage for product category Electronics last month","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S133_risky","query":"Disable rate limiting for a VIP customer API key","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S134_missing","query":"Give them access","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S135_error","query":"Circuit breaker tripped on inventory service after 50 consecutive failures","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S136_simple","query":"How does your pricing compare to competitors?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S137_tool","query":"Query support ticket volume trend grouped by category for Q2","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S138_risky","query":"Process a bulk refund of $50 each to all customers affected by outage last week","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","bulk"]}
+{"id":"S139_missing","query":"Fix the account issue","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S140_dead_letter","query":"Notification dispatch worker is consuming messages but never acknowledging them","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S141_simple","query":"Are there any discounts for annual billing?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","financial"]}
+{"id":"S142_tool","query":"List all API keys that are older than 180 days and still active","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S143_risky","query":"Migrate all user data from EU region to US region per internal request","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","gdpr","bulk"]}
+{"id":"S144_missing","query":"Resend the confirmation","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S145_error","query":"Celery worker lost connection to broker and job state is unknown","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S146_simple","query":"How do I add a team member as an admin?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S147_tool","query":"Fetch average session duration for users on mobile platform last week","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S148_risky","query":"Set account credit limit to unlimited for customer on verbal approval only","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S149_missing","query":"Update the record with the correct info","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S150_dead_letter","query":"Search indexer has been stuck rebuilding for 3 days and keeps timing out","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S151_simple","query":"Is there a limit to how many API calls I can make per day?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S152_tool","query":"Find all orders placed by customers in Vietnam last 30 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup","analytics"]}
+{"id":"S153_risky","query":"Manually mark a disputed chargeback as resolved in favor of merchant","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S154_missing","query":"Delete the old stuff","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","destructive"]}
+{"id":"S155_error","query":"Pub/sub topic subscriber fell behind by 200k unprocessed messages","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S156_simple","query":"How do I set up SSO for my organization?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S157_tool","query":"Aggregate total storage usage across all accounts in the Business tier","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S158_risky","query":"Immediately deactivate all accounts associated with flagged IP range 192.168.x.x","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","bulk"]}
+{"id":"S159_missing","query":"Move to production","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S160_dead_letter","query":"Email bounce handler queue is full and dropping messages with no recovery logic","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S161_simple","query":"What integrations do you support?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S162_tool","query":"Pull list of all promo codes that have been redeemed more than 1000 times","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S163_risky","query":"Forcefully end a live transaction that appears frozen in processing state","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S164_missing","query":"Update their profile","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S165_error","query":"gRPC streaming call dropped mid-stream due to server-side keepalive timeout","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S166_simple","query":"How do I invite external collaborators to a project?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S167_tool","query":"Get daily active user count for the past 14 days broken down by platform","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S168_risky","query":"Restore deleted workspace from backup without notifying the workspace owner","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","destructive"]}
+{"id":"S169_missing","query":"Handle the complaint","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S170_dead_letter","query":"Audit log export job has been hung at 99% for 12 hours and cannot be killed","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra","security"]}
+{"id":"S171_simple","query":"Can I transfer my account to another person?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S172_tool","query":"Fetch all customer accounts with overdue invoices older than 60 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","financial","lookup"]}
+{"id":"S173_risky","query":"Issue a store credit of $200 to a customer without verifying original purchase","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S174_missing","query":"Add the missing information","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S175_error","query":"Distributed lock acquisition failed causing race condition in checkout flow","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S176_simple","query":"How do I generate an API key?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S177_tool","query":"List all webhooks registered for organization ID ORG-4421 and their status","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S178_risky","query":"Apply retroactive discount to all past orders from a specific customer","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","bulk"]}
+{"id":"S179_missing","query":"Downgrade them","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S180_dead_letter","query":"Payment settlement batch job keeps deadlocking with another job at step 3 with no resolution","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial","infra"]}
+{"id":"S181_simple","query":"Does your platform support multi-currency billing?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","financial"]}
+{"id":"S182_tool","query":"Get conversion rate from free to paid for cohort that signed up in January","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S183_risky","query":"Skip the standard KYC check and onboard high-value client immediately","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","financial"]}
+{"id":"S184_missing","query":"Turn it off","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S185_error","query":"Elasticsearch cluster went read-only due to disk watermark being exceeded","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S186_simple","query":"What are the system requirements to run your desktop app?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S187_tool","query":"Pull median response time for support tickets by priority level last month","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S188_risky","query":"Delete all sandbox environments for accounts that have been inactive for 6 months","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","destructive","bulk"]}
+{"id":"S189_missing","query":"Reassign the ticket","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S190_dead_letter","query":"Cron job for generating monthly statements has silently failed for 3 months undetected","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial"]}
+{"id":"S191_simple","query":"How do I enable SAML authentication?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S192_tool","query":"Retrieve rate of support escalations to Tier 2 by agent for Q3","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S193_risky","query":"Reset all user passwords in the organization and force re-login immediately","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","bulk"]}
+{"id":"S194_missing","query":"Process the exception","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S195_error","query":"Kafka consumer group lag spiked to 500k and coordinator is unreachable","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S196_simple","query":"What is your uptime SLA?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S197_tool","query":"Fetch full activity log for admin user ID ADM-0077 over the past 90 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S198_risky","query":"Permanently ban user account and blacklist associated email domain","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","destructive","security"]}
+{"id":"S199_missing","query":"Run the analysis","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S200_dead_letter","query":"Multi-tenant data isolation job has been silently writing to wrong tenant buckets with no rollback","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra","security","destructive"]}
+{"id":"S201_risky","query":"Waive the late fee for this customer because they asked nicely","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S202_tool","query":"Show me conversion funnel drop-off rates for the onboarding flow this month","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S203_missing","query":"Just do what we agreed on last time","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S204_error","query":"DNS resolution failing intermittently for internal service mesh endpoints","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S205_simple","query":"How do I set up two-factor authentication?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S206_dead_letter","query":"Compliance report generation keeps OOM-crashing at the aggregation step with no viable fix","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S207_tool","query":"Get list of all customers whose credit cards expire within the next 30 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","financial","lookup"]}
+{"id":"S208_risky","query":"Approve access request to production database from contractor without security review","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S209_simple","query":"Do you support webhooks for real-time events?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S210_missing","query":"Send the invoice","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","financial"]}
+{"id":"S211_error","query":"Load balancer health checks failing after rolling deployment pushed bad config","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S212_tool","query":"Retrieve p95 latency for checkout API endpoint over the last 7 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S213_risky","query":"Create a backdated refund transaction dated 3 months ago to close a complaint","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","destructive"]}
+{"id":"S214_missing","query":"Lock the account","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","security"]}
+{"id":"S215_simple","query":"What happens to my data if I close my account?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","gdpr"]}
+{"id":"S216_dead_letter","query":"License validation service has been returning 401 for all users for 2 hours with no auth fix available","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","auth","security"]}
+{"id":"S217_tool","query":"List every product that has had more than 3 price changes in the last month","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S218_risky","query":"Suppress fraud alert and manually release a $10,000 wire transfer on hold","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","security"]}
+{"id":"S219_missing","query":"Open a ticket for this","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S220_error","query":"TLS handshake failing between API gateway and backend after certificate rotation","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra","security"]}
+{"id":"S221_simple","query":"Can I use your platform for a non-profit organization?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S222_tool","query":"Fetch all support agents ranked by first response time this quarter","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S223_risky","query":"Manually adjust the billing amount on an already-paid invoice to a lower value","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","destructive"]}
+{"id":"S224_missing","query":"Generate the report","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S225_error","query":"Service discovery returning stale endpoints causing 30% of requests to fail","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S226_simple","query":"How do I bulk import contacts from a CSV?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S227_tool","query":"Pull monthly recurring revenue breakdown by pricing plan for the last 6 months","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics","financial"]}
+{"id":"S228_risky","query":"Flag a competitor's product listing as fraudulent to get it removed","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky"]}
+{"id":"S229_missing","query":"Fix the billing issue","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","financial"]}
+{"id":"S230_dead_letter","query":"Automated account deprovisioning has been skipping rows silently due to a schema mismatch for 2 weeks","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra","destructive"]}
+{"id":"S231_simple","query":"What currency is billing in for users outside the US?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","financial"]}
+{"id":"S232_tool","query":"Look up all accounts that share the same billing address as customer ID 998812","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup","security"]}
+{"id":"S233_risky","query":"Re-enable a deactivated OAuth app that was disabled by security team last week","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S234_missing","query":"Send something to let them know","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S235_error","query":"GraphQL subscription WebSocket connections dropping every 45 seconds under load","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S236_simple","query":"How do I archive a project without deleting it?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S237_tool","query":"Identify all user accounts that triggered more than 5 password resets in 24 hours","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S238_risky","query":"Push a hotfix directly to production without going through staging or review","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","infra"]}
+{"id":"S239_missing","query":"Increase the limit","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S240_dead_letter","query":"Inventory sync between warehouse and storefront has been out of sync for 5 days with conflicting locks","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S241_simple","query":"Is it possible to schedule automated reports?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S242_tool","query":"Get churn count by acquisition channel for customers lost in the last 90 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S243_risky","query":"Remove a negative review a customer left after claiming they were coerced into writing it","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky"]}
+{"id":"S244_missing","query":"Handle the refund request","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","financial"]}
+{"id":"S245_error","query":"Feature flag evaluation service returning defaults for all users due to config store timeout","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S246_simple","query":"How does role-based access control work in your platform?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","security"]}
+{"id":"S247_tool","query":"Show me error rate per deployment version over the past 30 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics","infra"]}
+{"id":"S248_risky","query":"Transfer $25,000 in account credits from one enterprise org to another upon verbal request","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S249_missing","query":"Connect them with the right person","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S250_dead_letter","query":"Real-time fraud scoring model has been returning null scores for all transactions for 4 hours with no fallback","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial","security"]}
+{"id":"S251_simple","query":"What's the difference between a workspace and an organization?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S252_tool","query":"Pull breakdown of storage usage by file type for all accounts exceeding 10GB","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S253_risky","query":"Disclose a user's account activity to a third party claiming to be law enforcement via email only","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","gdpr"]}
+{"id":"S254_missing","query":"Pause it for now","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S255_error","query":"Event sourcing replay failed halfway through due to corrupted snapshot at offset 450k","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S256_simple","query":"How do I view audit logs for my organization?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","security"]}
+{"id":"S257_tool","query":"Find all customers who downgraded their plan in the last 60 days with their reason codes","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S258_risky","query":"Immediately rotate all production secrets and push changes without a change freeze waiver","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","infra"]}
+{"id":"S259_missing","query":"Merge the two records","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S260_dead_letter","query":"GDPR erasure pipeline keeps failing at external vendor sync step with no vendor support response","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","gdpr","infra"]}
+{"id":"S261_simple","query":"Does your API support pagination?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S262_tool","query":"Get list of all feature flags currently enabled for account ID ENT-5599","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup"]}
+{"id":"S263_risky","query":"Export and share full database backup with an external consulting firm requesting it by email","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","gdpr"]}
+{"id":"S264_missing","query":"Mark it as done","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S265_error","query":"Async job runner losing tasks on worker restart due to missing persistent queue config","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S266_simple","query":"How do I set spending limits on a team account?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","financial"]}
+{"id":"S267_tool","query":"Retrieve all accounts where primary contact email domain is a personal provider like gmail or yahoo","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","lookup","analytics"]}
+{"id":"S268_risky","query":"Assign a custom enterprise pricing tier to a startup without going through sales approval","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S269_missing","query":"Apply the discount","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification","financial"]}
+{"id":"S270_dead_letter","query":"SSO metadata sync job has been silently failing for a week causing new users unable to log in","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","auth","security"]}
+{"id":"S271_simple","query":"How do I transfer a project between workspaces?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S272_tool","query":"Pull list of all third-party OAuth apps authorized by users in the Enterprise plan","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S273_risky","query":"Unblock a previously banned IP address because an executive requested it verbally","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S274_missing","query":"Look into this for me","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S275_error","query":"Sidecar proxy crashed taking down all mTLS traffic in the service mesh","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra","security"]}
+{"id":"S276_simple","query":"Can I embed your widget on my own website?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq"]}
+{"id":"S277_tool","query":"Show me the heatmap of user activity by hour and day of week for last 30 days","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S278_risky","query":"Clone a customer's entire account configuration into a new account they claim to own","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security"]}
+{"id":"S279_missing","query":"Set up the integration","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S280_dead_letter","query":"Multi-region failover never completed and primary is still serving degraded traffic after 8 hours","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra"]}
+{"id":"S281_simple","query":"What is the data retention period for logs?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","faq","gdpr"]}
+{"id":"S282_tool","query":"Fetch top 20 most-used features across all Pro plan accounts this quarter","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S283_risky","query":"Skip scheduled maintenance window and deploy during peak traffic hours","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","infra"]}
+{"id":"S284_missing","query":"Add a note to this","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S285_error","query":"Outbox pattern processor has been stalling on a single poison message blocking all subsequent events","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S286_simple","query":"Can I get a receipt for my last payment?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple","financial"]}
+{"id":"S287_tool","query":"List all accounts with billing contacts who haven't opened a single email in 6 months","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","analytics"]}
+{"id":"S288_risky","query":"Override the automated contract expiry and extend it 12 months without legal sign-off","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial"]}
+{"id":"S289_missing","query":"Handle the exception case","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S290_dead_letter","query":"Cross-border payment reconciliation job has been stuck in a partial state for 3 days with no rollback path","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","financial","infra"]}
+{"id":"S291_simple","query":"How do I mute notifications for a specific project?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S292_tool","query":"Retrieve all API calls that returned 429 errors for key prefix PRD- in the last 24 hours","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","analytics"]}
+{"id":"S293_risky","query":"Preemptively cancel all subscriptions for accounts in a country before confirming legal requirements","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","financial","bulk","destructive"]}
+{"id":"S294_missing","query":"Roll it back","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S295_error","query":"Vector embedding service returning all-zero vectors after model hot-reload corrupted weights","expected_route":"error","requires_approval":false,"should_retry":true,"tags":["retry","infra"]}
+{"id":"S296_simple","query":"How do I customize email notification templates?","expected_route":"simple","requires_approval":false,"should_retry":false,"tags":["simple"]}
+{"id":"S297_tool","query":"Find all accounts where the owner email and billing email belong to different domains","expected_route":"tool","requires_approval":false,"should_retry":false,"tags":["tool","security","lookup"]}
+{"id":"S298_risky","query":"Immediately revoke all API keys across the platform due to suspected leak without notifying users first","expected_route":"risky","requires_approval":true,"should_retry":false,"tags":["hitl","risky","security","bulk"]}
+{"id":"S299_missing","query":"Do the usual thing for these accounts","expected_route":"missing_info","requires_approval":false,"should_retry":false,"tags":["clarification"]}
+{"id":"S300_dead_letter","query":"Zero-downtime schema migration has been holding a table lock for 6 hours blocking all writes with no kill switch","expected_route":"error","requires_approval":false,"should_retry":true,"max_attempts":1,"tags":["dead_letter","retry","infra","destructive"]}

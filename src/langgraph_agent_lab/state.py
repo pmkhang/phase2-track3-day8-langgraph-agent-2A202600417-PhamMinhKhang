@@ -57,6 +57,7 @@ class AgentState(TypedDict, total=False):
     proposed_action: str | None
     approval: dict[str, Any] | None
     evaluation_result: str | None
+    tool_task: str | None
     messages: Annotated[list[str], add]
     tool_results: Annotated[list[str], add]
     errors: Annotated[list[str], add]

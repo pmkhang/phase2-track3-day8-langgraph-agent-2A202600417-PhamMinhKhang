@@ -5,6 +5,16 @@ from __future__ import annotations
 from .state import AgentState, Route
 
 
+def fan_out_tools(state: AgentState) -> list:
+    """Conditional edge: fan-out to two parallel tool_worker nodes via Send()."""
+    from langgraph.types import Send
+
+    return [
+        Send("tool_worker", {**state, "tool_task": "primary"}),
+        Send("tool_worker", {**state, "tool_task": "secondary"}),
+    ]
+
+
 def route_after_classify(state: AgentState) -> str:
     """Map classified route to the next graph node.
 
